@@ -10,7 +10,7 @@ open("flicks.db", "w").close()
 #store flicks.db in variable db
 db=SQL("sqlite:///flicks.db")
 
-#create movies table with priary keym
+#create movies table with primary key
 db.execute("CREATE TABLE movies (id INTEGER, title TEXT, PRIMARY KEY(id))")
 
 #create genre table with foreign key 
