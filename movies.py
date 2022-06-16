@@ -6,10 +6,14 @@ with open("gross movies.csv", "r", encoding="UTF-8") as file:
 
     for movie in reader:
         #print all values with key Film
-        print(movie["Film"])
+        # print(movie["Film"])
 
         #store the values under key Film in a set 
         movies.add(movie["Film"])
+
+    #loop through the movies set
+    for ka_movie in movies:
+        print(ka_movie)
 
 
 
