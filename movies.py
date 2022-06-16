@@ -11,8 +11,8 @@ with open("gross movies.csv", "r", encoding="UTF-8") as file:
         #store the values under key Film in a set 
         movies.add(movie["Film"])
 
-    #loop through the movies set
-    for ka_movie in movies:
+    #loop through the movies set and sort the data
+    for ka_movie in sorted(movies):
         print(ka_movie)
 
 
