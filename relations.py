@@ -20,5 +20,7 @@ with open("gross movies.csv", "r") as file:
         # get title and store in a variable title 
         title = row["Film"].strip().capitalize()
 
-        #insert data into table 
+        #insert data into movies table 
         db.execute("INSERT INTO movies (title) VALUES(?)", title)
+
+        
