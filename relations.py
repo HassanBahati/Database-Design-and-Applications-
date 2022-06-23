@@ -12,7 +12,6 @@ db.execute("CREATE TABLE movies (id INTEGER, title TEXT, PRIMARY KEY(id))")
 #create table genre
 db.execute("CREATE TABLE genre (movie_id INTEGER, genre TEXT, FOREIGN KEY(movie_id) REFERENCES movies(id))" )
 
-# inserting data into table
 with open("gross movies.csv", "r") as file:
     #store in file called reader
     reader = csv.DictReader(file)
@@ -21,4 +20,5 @@ with open("gross movies.csv", "r") as file:
         # get title and store in a variable title 
         title = row["Film"].strip().capitalize()
 
+        #insert data into table 
         db.execute("INSERT INTO movies (title) VALUES(?)", title)
