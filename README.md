@@ -21,3 +21,9 @@ UPDATE movies SET film = "Dear Collins" WHERE Film LIKE "%Dear%";
 
 ## save database 
 .save moviesList 
+
+## open database
+.open moviesList.db
+
+
+
