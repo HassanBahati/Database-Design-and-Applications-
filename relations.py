@@ -21,6 +21,9 @@ with open("gross movies.csv", "r") as file:
         title = row["Film"].strip().capitalize()
 
         #insert data into movies table 
-        db.execute("INSERT INTO movies (title) VALUES(?)", title)
+        id=db.execute("INSERT INTO movies (title) VALUES(?)", title)
 
-        
+        for genre in row["Genre"].split(","):
+            
+            #insert data into genre table
+            db.execute("INSERT INTO genre (movie_id, genre) VALUES(?,?)", id, genre)
