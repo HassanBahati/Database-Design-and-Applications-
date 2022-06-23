@@ -25,5 +25,7 @@ UPDATE movies SET film = "Dear Collins" WHERE Film LIKE "%Dear%";
 ## open database
 .open moviesList.db
 
+## delte table
+DELETE FROM table
 
 
