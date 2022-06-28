@@ -19,3 +19,4 @@ with open("gross movies.csv", "r") as file:
         title = row["Film"].strip().capitalize()
 
         db.execute("INSERT INTO movies (title) VALUES(?)", title)
+        
