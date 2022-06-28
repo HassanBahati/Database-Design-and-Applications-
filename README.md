@@ -8,7 +8,7 @@
 eg SELECT * FROM "table";
 
 ## insert a movie into table
-INSERT INTO table (<"column", "column") VALUES ("value", "value");
+INSERT INTO table ("column", "column") VALUES ("value", "value");
 
 ## select a particular value from the table
 SELECT Film FROM movies WHERE Film LIKE "%see%"
@@ -28,4 +28,7 @@ UPDATE movies SET film = "Dear Collins" WHERE Film LIKE "%Dear%";
 ## delte table
 DELETE FROM table
 
+## Concatenation of queries - get movies whose id is in the list of ids with genre Romance
+SELECT Film FROM movies WHERE id IN (SELECT movie_id FROM genre WHERE genre LIKE "%Romance%")
 
+SELECT genre FROM genre WHERE movie_id = (SELECT id FROM movies WHERE title LIKE "%Zack%");
