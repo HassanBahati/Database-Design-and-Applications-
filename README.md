@@ -41,3 +41,7 @@ get a lst of movies and their genres
 
 ## count through a table
 SELECT COUNT(column) FROM table;
+
+## get the time taken by a query
+.timer ONGIT ADD .
+GIT COMMIT 
