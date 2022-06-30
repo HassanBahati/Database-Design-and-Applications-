@@ -35,3 +35,6 @@ SELECT genre FROM genre WHERE movie_id = (SELECT id FROM movies WHERE title LIKE
 
 .txt and .db
 get a lst of movies and their genres 
+
+## count through a table
+SELECT COUNT(column) FROM table;
