@@ -11,7 +11,7 @@ eg SELECT * FROM "table";
 INSERT INTO table ("column", "column") VALUES ("value", "value");
 
 ## select a particular value from the table
-SELECT Film FROM movies WHERE Film LIKE "%see%"
+SELECT "column_field" FROM "table" WHERE "Film" LIKE "%see%"
 
 ## delete a movie from the table 
 DELETE FROM movies WHERE FILM LIKE "%Waitress%"
@@ -32,3 +32,6 @@ DELETE FROM table
 SELECT Film FROM movies WHERE id IN (SELECT movie_id FROM genre WHERE genre LIKE "%Romance%")
 
 SELECT genre FROM genre WHERE movie_id = (SELECT id FROM movies WHERE title LIKE "%Zack%");
+
+.txt and .db
+get a lst of movies and their genres 
