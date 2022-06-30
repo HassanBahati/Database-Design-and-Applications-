@@ -1,6 +1,9 @@
-## transforming sqlite to sql
+## set environment
 .mode csv
-.import "file"
+
+## import data file
+.import "file" table_name
+
 # get design of table 
 .schema
 
