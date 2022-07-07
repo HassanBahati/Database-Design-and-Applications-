@@ -1,6 +1,9 @@
-## transforming sqlite to sql
+## set environment
 .mode csv
-.import "file"
+
+## import data file
+.import "file" table_name
+
 # get design of table 
 .schema
 
@@ -35,3 +38,18 @@ SELECT genre FROM genre WHERE movie_id = (SELECT id FROM movies WHERE title LIKE
 
 .txt and .db
 get a lst of movies and their genres 
+
+## count through a table
+SELECT COUNT(column) FROM table;
+
+## get the time taken by a query
+.timer ON
+
+## 
+CREATE INDEX title_index ON shows (title);
+
+CREATE INDEX name_index ON people (name)
+
+SELECT title FROM shows WHERE id IN (SELECT person_id FROM stars WHERE person_id IN (SELECT id FROM people WHERE name LIKE "%Thomas%"));
+
+SELECT name FROM people WHERE person_id IN (SELECT person_id FROM stars show_id IN (SELECT id FROM shows WHERE title LIKE "%The Office%"));
