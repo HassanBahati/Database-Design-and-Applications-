@@ -43,5 +43,13 @@ get a lst of movies and their genres
 SELECT COUNT(column) FROM table;
 
 ## get the time taken by a query
-.timer ONGIT ADD .
-GIT COMMIT 
+.timer ON
+
+## 
+CREATE INDEX title_index ON shows (title);
+
+CREATE INDEX name_index ON people (name)
+
+SELECT title FROM shows WHERE id IN (SELECT person_id FROM stars WHERE person_id IN (SELECT id FROM people WHERE name LIKE "%Thomas%"));
+
+SELECT name FROM people WHERE person_id IN (SELECT person_id FROM stars show_id IN (SELECT id FROM shows WHERE title LIKE "%The Office%"));
